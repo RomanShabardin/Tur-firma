@@ -1,1296 +1,309 @@
-/* ubuntu-regular - latin_cyrillic */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/ubuntu-v20-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ubuntu-v20-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ubuntu-v20-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/ubuntu-v20-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ubuntu-v20-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/ubuntu-v20-latin_cyrillic-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
-}
-
-/* ubuntu-500 - latin_cyrillic */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 500;
-  src: url('../fonts/ubuntu-v20-latin_cyrillic-500.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ubuntu-v20-latin_cyrillic-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ubuntu-v20-latin_cyrillic-500.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/ubuntu-v20-latin_cyrillic-500.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ubuntu-v20-latin_cyrillic-500.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/ubuntu-v20-latin_cyrillic-500.svg#Ubuntu') format('svg'); /* Legacy iOS */
-}
-
-/* ubuntu-700 - latin_cyrillic */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Ubuntu';
-  font-style: normal;
-  font-weight: 700;
-  src: url('../fonts/ubuntu-v20-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/ubuntu-v20-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/ubuntu-v20-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/ubuntu-v20-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/ubuntu-v20-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/ubuntu-v20-latin_cyrillic-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
-}
- 
-/*Стиили для всего сайта*/
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-}
-
-html  {
-  scroll-behavior: smooth;
-}
-
-body{
-  font: normal 16px sans-serif;
-  color: #555;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 1.8;
-}
-
-ul, nav {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 70px;
-}
-
-.section-title{
-  color: #219fa3;
-  text-transform: uppercase;
-  font: bold 32px 'Ubuntu', sans-serif;
-  margin-bottom: 35px;
-  text-align: center
-}
-
-/*Шапка*/
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 35px 100px 0;
-}
-
-.header__logo  {
-  font-size: 1.5em;
-}
-
-.logo-link {
- color: #fff;
- opacity: 1;
-}
-
-.logo-link:hover {
-  opacity: 0.6;
-}
-
-.logo-link:active{
-  text-decoration: underline;
-}
-
-.header__phone {
-  color: #fff;
-  opacity: 1;
-  font-size: 1.5em;
-  font-weight: 700;
-}
-
-/*Слоган*/
-.slogan{
-  position: relative;
-  justify-content: center;
-  min-height: 100vh;
-  color: #fff;
-  text-align: center;
-}
-
-.slogan-bg{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-color: #2196F3;
-  z-index: -1;
-}
-
-.slogan-bg:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #414a4f;
-  opacity: 0.75;
-}
-
-.slogan__title{
-  font: bold 50px 'Ubuntu', sans-serif;
-  margin-bottom: 15px;
-}
-
-.slogan__subtitle{
-  font: normal 28px 'Ubuntu', sans-serif;
-  margin-bottom: 80px;
-}
-
-.slogan__btn{
-  padding: 15px 40px;
-  color: #fff;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background-color: #219fa3;
-  font-weight: 500;
-  text-align: center;
-  font-size: 0.8em;
-  border: none;
-}
-
-.slogan__btn:hover, .form-btn:hover {
-  color: #219fa3;
-  background-color: #fff;
-}
-
-.slogan__btn:active, .form-btn:active {
-  box-shadow: inset 0px 0px 3px #219fa3;
-}
-
-/*Особенности туров*/
-.particularity {
-  background-color: #f1f1f1;
-}
-
-.particularity__title{
-  font-size: 1.3em;
-  margin-bottom: 20px;
-  color: #219fa3;
-  font-weight: 500;
-  position: relative;
-}
-
-.particularity__title::after {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 2px;
-  background-color: #219fa3;
-  top: 50%;
-  right: -55px;
-  transition: all 0.5s;
-}
-.particularity__title::before {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 2px;
-  background-color: #219fa3;
-  top: 50%;
-  left: -55px;
-  transition: all 0.3s;
-}
-
-.particularity__title:hover::after {
-  position: absolute;
-  content: "";
-  width: 60px;
-  height: 2px;
-  background-color: #555;
-  top: 50%;
-  right: -65px;
-}
-
-.particularity__title:hover::before {
-  position: absolute;
-  content: "";
-  width: 60px;
-  height: 2px;
-  background-color: #555;
-  top: 50%;
-  left: -65px;
-}
-
-.particularity__text {
-  text-align: center;
-  max-width: 70%;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-/* Фильтр*/
-.ff-container input {
-  display: none;
-}
-
-.ff-container label {
-  min-height: 50px;
-  cursor: pointer;
-  color: #777;
-  font-size: 24px;
-  padding: 0 20px 30px 20px;
-}
-
-.ff-container input.ff-all:checked~.card{
-  min-width: 350px;
-  transform: scale(1, 1);
-  transition: transform 0.3s linear;
-}
-
-.grid {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.filter, .ff-items {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.filter-controls{
-  display: flex;
-  justify-content: center;
-  
-}
-.ff-items {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.card{
-  text-align: center; 
-  line-height: 1.5;
-}
-
-.card-img {
-  max-width: 100%;
-  padding: 0px 20px;
-  object-fit: cover;
-  width: 400px;
-}
-
-.card-resort {
-  color: #219fa3;
-}
-
-.card-price {
-  color: #219fa3;
-  font-size: 0.9em;
-}
-
-[value="all"]:checked~.grid .card[data-category]{
-  animation: tury3 0.5s;
-  display: block;
-}
-[value="rus"]:checked~.grid .card[data-category~="rus"],
-[value="ind"]:checked~.grid .card[data-category~="ind"],
-[value="kit"]:checked~.grid .card[data-category~="kit"],
-[value="viet"]:checked~.grid .card[data-category~="viet"]{
-  animation: tury2 0.5s;
-}
-[value="rus"]:checked~.grid .card:not([data-category~="rus"]),
-[value="ind"]:checked~.grid .card:not([data-category~="ind"]),
-[value="kit"]:checked~.grid .card:not([data-category~="kit"]),
-[value="viet"]:checked~.grid .card:not([data-category~="viet"]){
-  animation: tury 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes tury{
-  0%{
-    margin-right: 0px;
-    opacity: 50%;
-    position: absolute;
-  }
-  50%{
-    margin-right: 1000px;
-    opacity: 30%;
-    position: absolute;
-  }
-  100%{
-    opacity: 0%;
-    position: absolute;
-    margin-bottom: 1000px;
-  }
-  
-}
-@keyframes tury2{
-  0%{
-   opacity: 0%;
-  }
-  100%{
-    opacity: 100%;
-  }
-  
-}
-@keyframes tury3{
-  0%{
-   opacity: 0%;
-  }
-  100%{
-    opacity: 100%;
-  }
-
-  
-}
-
-.pluahs-slider img{
-  width: 70%;
-  
-  margin: 0 auto;
-  margin-top: 5vh;
-}
-.pluahs-slider{
-  width: 60%;
-  margin: 0 auto;
-}
-
-/*Консультанты*/
-.manager {
-  background-color: #f1f1f1;
-}
-
-.manger__text {
-  text-align: center;
- margin-bottom: 30px;
-}
-
-.team-list {
-  width: 30%;
-  margin: 20px;
-  text-align: center;
-}
-
-.team-list__img {
-  max-width: 100%;
-  width: 400px;
-  object-fit: cover;
-  transition: all 0.5s;
-  border-radius:5px;
-  box-shadow: 0 0 3px 3px #219fa313;
-}
-
-.team-list__img:hover {
-  filter: opacity(80%);
-  border-radius: 50%;
-}
-
-/*Видео фон*/
-.video-bg {
-  width: 100%;
-  height: 80vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.video-bg video {
-  width: 100%;
-  height: 80vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
- }
-
-.video-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #2f3031;
-  opacity: 0.5;
-}
-
-.video-bg__content {
-  z-index: 2;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-/*Секция преимущества*/
-.features {
-  background: #fff;
-}
-.features-text {
-  text-align: center;
-}
-.grid-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 50px 0 30px;
-}
-
-.list-item {
-  flex-basis: 10%;
-  margin: 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.list-item i {
-  font-size: 40px;
-  color: #219fa3;
-  margin-bottom: 25px;
-  transition: all 0.5s;
-}
-
-.list-item:hover  i{
-   color: #414a4f;
-}
-
-.item-text {
-  font-size: 0.9em;
-  line-height: 1.3;
-}
-
-/*Отзывы*/
-.reviews {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  color: #fff;
-  padding: 0 20px;
-  flex-basis: 25%;
-  transition: all 0.8s;
-}
-
-.item:hover {
-  flex-basis: 65%;
-}
-
-.item:nth-child(even) {
-  background: #219fa3;
-}
-.item:nth-child(odd) {
-  background: #414a4f;
-}
-
-.item span {
-  font: 18px 'Open Sans', sans-serif;
-  line-height: 1.8;
-}
-
-/*Подбор тура*/
-.selection-tour {
-  background-color: #f1f1f1;
-}
-
-.section-text {
-  text-align: center;
-  max-width: 80%;
-  margin-bottom: 20px;
-}
-
-.container-form{
-  max-width: 1200px;
-  width: 100%;
-  padding:30px;
-  background-color: #fcfcfc;
-  border-radius: 5px;
-  box-shadow: 0 0 3px 4px #219fa313;
-}
-
-.form{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px 0 12px 0;
-}
-
-.form label{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-.form-group{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
-}
-
-.form select {
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #219fa3;
-  padding: 15px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.form-group input{
-  height: 50px;
-  width: 100%;
-  outline: none;
-  border-radius: 5px;
-  border: 1px solid #219fa3;
-  padding: 15px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.form input:focus, textarea:focus {
-  border: 1px solid #414a4f;
-  box-shadow: 0 0 3px 4px #219fa313;
-}
-
-.form-group1 {
-  display: flex;
-  align-items: center;
- 
-}
-.form-group1 label {
-  margin-right: 10px;
-}
-/* для элемента input c type="checkbox" */
-.custom-checkbox>input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-/* для элемента label, связанного с .custom-checkbox */
-.custom-checkbox>span {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-  margin: 5px;
-}
-
-/* создание в label псевдоэлемента before со следующими стилями */
-.custom-checkbox>span::before {
-  content: '';
-  display: inline-block;
-  width: .8em;
-  height: 0.8em;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #adb5bd;
-  border-radius: 0.25em;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-}
-
-/* стили при наведении курсора на checkbox */
-.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
-  border-color: #219fa3;
-}
-
-/* стили для активного чекбокса (при нажатии на него) */
-.custom-checkbox>input:not(:disabled):active+span::before {
-  background-color: #219fa3;
-  border-color: #414a4f;
-}
-
-/* стили для чекбокса, находящегося в фокусе */
-.custom-checkbox>input:focus+span::before {
-  box-shadow: 0 0 0 0.1rem rgba(119, 119, 119, 0.432);
-}
-
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.custom-checkbox>input:focus:not(:checked)+span::before {
-  border-color: #219fa3;
-}
-
-/* стили для чекбокса, находящегося в состоянии checked */
-.custom-checkbox>input:checked+span::before {
-  border-color: #219fa3;
-  background-color: #219fa3;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
-}
-
-/* для элемента input c type="radio" */
-.custom-radio>input {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
-
-/* для элемента label связанного с .custom-radio */
-.custom-radio>span {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-
-/* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio>span::before {
-  content: '';
-  display: inline-block;
-  width: 0.8em;
-  height: 0.8em;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #adb5bd;
-  border-radius: 50%;
-  margin-right: 0.5em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-}
-
-/* стили при наведении курсора на радио */
-.custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
-  border-color: #219fa3;
-}
-
-/* стили для активной радиокнопки (при нажатии на неё) */
-.custom-radio>input:not(:disabled):active+span::before {
-  background-color: #219fa3;
-  border-color: #414a4f;
-}
-
-/* стили для радиокнопки, находящейся в фокусе */
-.custom-radio>input:focus+span::before {
-  box-shadow: 0 0 0 0.1rem rgba(119, 119, 119, 0.432);
-}
-
-/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.custom-radio>input:focus:not(:checked)+span::before {
-  border-color: #219fa3;
-}
-
-/* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio>input:checked+span::before {
-  border-color: #219fa3;
-  background-color: #219fa3;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-}
-
-.form-group input[type="time"] {
-  width: 30%;
-}
-
-form .form-group2{
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.form-group2 textarea{
-  width: 100%;
-  height: 20vh;
-  border: 1px solid #219fa3;
-  padding: 15px;
-}
-
-.button-form{
-  width: 30%;
-  margin: 0 auto;
-}
-
-.submit{
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border: none;
-  padding: 15px 40px;
-  color: #fff;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background-color: #219fa3;
-  font-weight: 500;
-  text-align: center;
-  font-size: 0.8em;
-  transition: all 0.5s;
-}
-
-.submit:hover {
-  background-color: #fff;
-  color: #219fa3;
-  border: 1px solid #219fa3;
-}
-
-.submit:active {
-  box-shadow: 0 0 3px 3px #219fa313;
-  color: #2f3031;
-}
-
-/*Футер*/
-.footer {
-  background-color: #414a4f;
-  color: #fff;
-  padding: 30px 0;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.footer-social {
-  display: flex;
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.social__item {
-  margin: 0 40px;
-}
-
-.social__item:first-child {
-  margin-left: 0;
-}
-
-.social__item:last-child {
-  margin-right: 0;
-}
-
-footer p {
-  text-transform: uppercase;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 10px;
-}
-
-.social-link {
-  color: #fff;
-}
-
-.social-link:hover {
-  color: #219fa3;
-}
-
-/* .buttonup {
-  position: fixed;
-  bottom: 20px;
-  left: 94vw;
-  z-index: 10;
-} */
-
-/*Адаптация под планшет*/
-@media only screen and (min-width : 768px) and (max-width : 1024px) {
-  .buttonup {
-    display: none;
-  }
-  .filter-controls{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /*секция*/
-
-  section {
-    padding: 30px 50px;
- }
- 
- /*логотип и телефон*/
-.header__logo, .header__phone {
-  font-size: 1.4em;
-}
-
-/*слоган*/
-.slogan {
-    min-height: 50vh;
-  }
-
-.slogan__title {
-    font-size: 1.6em;
-   margin-top: 50px;
-  }
-
-.slogan__subtitle {
-    font-size: 1em;
-}
-
-.slogan__btn {
-    font-size: 0.8em;
-    padding: 12px 40px;
-  }
-
-/*заголовок секции*/
-.section-title {
-  font-size: 1.3em;
-}
-
-/*особенности*/
-.particularity__title {
-  font-size: 1.1em;
-  margin-bottom: 15px;
-}
-
-.particularity__text {
-  font-size: 0.9em;
-  max-width: 90%;
-  margin-bottom: 15px;
-}
-
-/*консультанты*/
-.team-list__text {
-  font-size: 0.9em;
-}
-
-.team-list {
-  width: 100%;
-  margin: 20px;
-}
-
-.list-item {
-  flex-basis: 25%;
-  margin: 20px;
-}
-
-/*видеофон*/
-.video-bg {
-  height: 70vh;
-}
-
-.video-bg__title{
-font-size: 1.5em;
-line-height: 1.5;
-}
-
-.video-bg__subtitle{
-  font-size: 1.3em;
-}
-
-/*отзывы*/
-.reviews {
-  height: 60vh;
-  flex-flow: column;
-}
-
-/*форма*/
-.section-text {
-     max-width: 100%;
-    margin-bottom: 30px;
-    font-size: 0.85em;
-}
-
-.form-group1_adaprive {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-}
-
-/*Адаптация под доп размер*/
-@media only screen and (min-width : 1024px) and (max-width : 1300px) {
-  .form-group1_adaprive {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-}
-
-/*Адаптация под смартфон*/
-@media only screen and (min-width : 375px) and (max-width : 767px) {
-  .pluahs-slider img{
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 5vh;
-  }
-  .pluahs-slider{
-    width: 70%;
-    margin: 0 auto;
-  }
-section {
-    padding: 60px 30px;
-    line-height: 1.3;
-  }
-  .filter, .ff-items {
-    background-color: #ffffff;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-.header {
-    flex-direction: column;
-  }
-.header__logo, .header__phone {
-  font-size: 1.3em;
-}
-
-.header__logo{
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-.slogan {
-    min-height: 70vh;
-  }
-
-.slogan__title {
-    font-size: 1.45em;
-    margin-top: 90px;
-  }
-
-.slogan__subtitle {
-    font-size: 1em;
-  }
-
-.slogan__btn {
-    font-size: 0.7em;
-    padding: 10px 36px;
-  }
-
-.section-title {
-    font: bold 26px 'Open Sans', sans-serif;
-  }
-
-.particularity__title {
-    font-size: 1em;
-    text-align: center;
-  }
-
-.particularity__text {
-    font-size: 0.8em; 
-    max-width: 100%;
-}
-
-.particularity__title::after {
-    display: none;
-  }
-
-.particularity__title::before {
-    display: none;
-  }
-
-.team-list {
-    width: 100%;
-    margin: 10px;
-}
-
-.team-list__text {
-  font-size: 0.8em;
-}
-
-.list-item {
-  flex-basis: 100%;
-  margin: 20px;
-}
-.list-item i {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-.item-text {
-  font-size: 0.8em;
-  line-height: 1.2;
-}
-.filter-controls{
-  display: block;
-  
-}
-
-/*видеофон*/
-.video-bg {
-  height: 50vh;
-}
-
-.video-bg__title{
-font-size: 1.2em;
-line-height: 1.3;
-}
-
-.video-bg__subtitle{
-  font-size: 1em;
-}
-.ff-container label {
-    min-height: 40px;
-    font-size: 1.2em;
-    padding: 0 20px 20px 20px;
-    line-height: 2;
-  }
-
-.features .grid li {
-    flex-basis: 100%;
-    padding: 0 10px;
-  }
-
-.grid-list {
-   margin: 20px;
-}
-
-.reviews {
-    height: 80vh;
-    flex-flow: column;
-  }
-
-.item span {
-    font: 16px 'Open Sans', sans-serif;
-    line-height: 1.5;
-  }
-  .section-text {
-    max-width: 100%;
-   margin-bottom: 20px;
-   font-size: 0.8em;
-}
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: 10px 0 12px 0;
-    font-size: 0.8em;
-  }
-  .form-group {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  .form-group1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-
-  .form-group input[type="time"] {
-    width: 40%;
-  }
-
-  .form-group1 label {
-    margin-right: 0px;
-  }
-  .button-form {
-    width: 100%;
-   
-  }
-.footer {
-    padding: 30px 0;
-}
-  
-.footer-social {
-   font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-.social__item {
-    margin: 0 20px;
-  }
-
-.buttonup {
-    display: none;
-  }
-}
-
-@media only screen and (min-width : 260px) and (max-width : 374px) {
-  .pluahs-slider img{
-    width: 90%;
-    margin-left: 8vw;
-    margin-top: 10vh;
-  }
-  .pluahs-slider{
-    width: 70%;
-    margin: 0 auto;
-  }
-section {
-    padding: 60px 30px;
-    line-height: 1.3;
-  }
-
-.header {
-    flex-direction: column;
-  }
-.header__logo, .header__phone {
-  font-size: 1.3em;
-}
-
-.header__logo{
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-.slogan {
-    min-height: 70vh;
-  }
-
-.slogan__title {
-    font-size: 1.45em;
-    margin-top: 90px;
-  }
-
-.slogan__subtitle {
-    font-size: 1em;
-  }
-
-.slogan__btn {
-    font-size: 0.7em;
-    padding: 10px 36px;
-  }
-
-.section-title {
-    font: bold 26px 'Open Sans', sans-serif;
-  }
-
-.particularity__title {
-    font-size: 1em;
-    text-align: center;
-  }
-
-.particularity__text {
-    font-size: 0.8em; 
-    max-width: 100%;
-}
-
-.particularity__title::after {
-    display: none;
-  }
-
-.particularity__title::before {
-    display: none;
-  }
-
-.team-list {
-    width: 100%;
-    margin: 10px;
-}
-
-.team-list__text {
-  font-size: 0.8em;
-}
-
-.list-item {
-  flex-basis: 100%;
-  margin: 20px;
-}
-.list-item i {
-  font-size: 40px;
-  margin-bottom: 15px;
-}
-.item-text {
-  font-size: 0.8em;
-  line-height: 1.2;
-}
-.filter-controls{
-  display: block;
-  
-}
-
-/*видеофон*/
-.video-bg {
-  height: 50vh;
-}
-
-.video-bg__title{
-font-size: 1.2em;
-line-height: 1.3;
-}
-
-.video-bg__subtitle{
-  font-size: 1em;
-}
-.ff-container label {
-    min-height: 40px;
-    font-size: 1.2em;
-    padding: 0 20px 20px 20px;
-    line-height: 2;
-  }
-
-.features .grid li {
-    flex-basis: 100%;
-    padding: 0 10px;
-  }
-
-.grid-list {
-   margin: 20px;
-}
-
-.reviews {
-    height: 80vh;
-    flex-flow: column;
-  }
-
-.item span {
-    font: 16px 'Open Sans', sans-serif;
-    line-height: 1.5;
-  }
-  .section-text {
-    max-width: 100%;
-   margin-bottom: 20px;
-   font-size: 0.8em;
-}
-  .form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: 10px 0 12px 0;
-    font-size: 0.8em;
-  }
-  .form-group {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  .form-group1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-  }
-
-  .form-group input[type="time"] {
-    width: 40%;
-  }
-
-  .form-group1 label {
-    margin-right: 0px;
-  }
-  .button-form {
-    width: 100%;
-   
-  }
-.footer {
-    padding: 30px 0;
-}
-  
-.footer-social {
-   font-size: 32px;
-    margin-bottom: 15px;
-  }
-  
-.social__item {
-    margin: 0 20px;
-  }
-
-.buttonup {
-    display: none;
-  }
-}
-
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Шангри-Ла</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="https://kit.fontawesome.com/f2cc8d7f38.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+	<!-- Шапка -->
+	<header class="header">
+		<h1 class="header__logo"><a class="logo-link" href="#">Шангри-Ла</a></h1>
+		<nav class="nav">
+			<a href="tel:83431224523" class="header__phone">8-343-122-45-23</a>
+		</nav>
+	</header>
+	<!-- Слоган -->
+	<section class="slogan">
+		<div class="slogan-bg" style="background-image: url(img/hero.jpg);"></div>
+		<h1 class="slogan__title">С нами путешествовать просто</h1>
+		<h2 class="slogan__subtitle">Мы обо всем позаботились - отдыхайте!</h2>
+		<a href="#bid" class="slogan__btn">Подобрать тур</a>
+	</section>
+	<!-- Особенности горящих туров -->
+	<section class="particularity">
+		<h2 class="section-title">Особенности горящих туров</h2>
+		<h3 class="particularity__title">Низкая цена</h3>
+		<p class="particularity__text">Не все туристы имеют возможность заранее спланировать поездку. Иногда решение об отпуске принимается спонтанно, и времени на подготовку путешествия попросту не остается.</p>
+		<h3 class="particularity__title">Возможность отправиться в поездку немедленно</h3>
+		<p class="particularity__text">Между покупкой турпакета и непосредственным путешествием проходит совсем мало времени. Таким образом, туристу не приходится томиться в ожидании поездки, а можно наслаждаться отдыхом и новыми
+			впечатлениями практически сразу.</p>
+		<h3 class="particularity__title">Отсутствие возможности выбора</h3>
+		<p class="particularity__text">Определенного типа отеля, даты и времени вылета самолета, а также количества дней, которые можно будет провести на отдыхе в другой стране. Это связано с тем, что предлагаемый горящий тур уже
+			предварительно скомплектован туроператором и не подлежит изменению.</p>
+	</section>
+	<!-- Фильтр -->
+	<section class="filter">
+		<h2 class="section-title">Горящие туры по направлениям</h2>
+		<div class="ff-container"><input id="all" name="radio" type="radio" class="ff-all" checked="checked" value="all" />
+			<label for="all">Все направления</label>
+			<input id="rus" name="radio" type="radio" value="rus"/>
+			<label for="rus">Россия</label>
+			<input id="ind" name="radio" type="radio" value="ind"/>
+			<label for="ind">Индонезия</label>
+			<input id="kit" name="radio" type="radio" value="kit"/>
+			<label for="kit">Китай</label>
+			<input id="viet" name="radio" type="radio" value="viet"/>
+			<label for="viet">Вьетнам</label>
+			<div class="grid ff-items">
+				<div class="card item-rus" data-category="rus">
+					<img class="card-img"src="img/t1.jpg" alt="тур"/>
+					<h3 class="card-resort">Адлер</h3>
+					<h4 class="card-price">28600 руб.</h4>
+					<p class="card-country">Россия</p>
+				</div>
+				<div class="card item-rus"data-category="rus">
+					<img class="card-img"src="img/t2.jpg" alt="тур"/>
+					<h3 class="card-resort">Крым</h3>
+					<h4 class="card-price">38750 руб.</h4>
+					<p class="card-country">Россия</p>
+				</div>
+				<div class="card item-ind" data-category="ind">
+					<img class="card-img"src="img/t3.jpg" alt="тур"/>
+					<h3 class="card-resort">Бали</h3>
+					<h4 class="card-price">88600 р.</h4>
+					<p class="card-country">Индонезия</p>
+				</div>
+				<div class="card item-ind" data-category="ind">
+					<img class="card-img"src="img/t4.jpg" alt="тур"/>
+					<h3 class="card-resort">Кута</h3>
+					<h4 class="card-price">81666 руб.</h4>
+					<p class="card-country">Индонезия</p>
+				</div>
+
+				<div class="card item-kit" data-category="kit">
+					<img class="card-img"src="img/t5.jpg" alt="тур"/>
+					<h3 class="card-resort">Санья</h3>
+					<h4 class="card-price">48600 руб.</h4>
+					<p class="card-country">Китай</p>
+				</div>
+				<div class="card item-kit" data-category="kit">
+					<img class="card-img"src="img/t6.jpg" alt="тур"/>
+					<h3 class="card-resort">Пекин</h3>
+					<h4 class="card-price">58750 руб.</h4>
+					<p class="card-country">Китай</p>
+				</div>
+				<div class="card item-viet" data-category="viet">
+					<img class="card-img"src="img/t7.jpg" alt="тур"/>
+					<h3 class="card-resort">Дананг</h3>
+					<h4 class="card-price">62600 руб.</h4>
+					<p class="card-country">Вьетнам</p>
+				</div>
+				<div class="card item-viet" data-category="viet">
+					<img class="card-img"src="img/t8.jpg" alt="тур"/>
+					<h3 class="card-resort">Нянчанг</h3>
+					<h4 class="card-price">72800 руб.</h4>
+					<p class="card-country">Вьетнам</p>
+				</div>
+		</div>
+	</div>
+	</section>
+	<!-- Консультанты -->
+	<section class="manager">
+		<h2 class="section-title">Наши консультанты</h2>
+		<p class="manger__text">У нас работают профессионалы с огромным опытом. Мы заботимся, о том, чтобы вы хорошо отдохнули.</p>
+		<ul class="grid">
+			<li class="team-list">
+				<img class="team-list__img" src="img/manager1.jpg" alt="консультант">
+				<p class="team-list__text">Светлана Астахова - менеджер по туризму</p>
+			</li>
+			<li class="team-list">
+				<img class="team-list__img" src="img/manager2.jpg" alt="консультант">
+				<p class="team-list__text">Сергей Иванов - менеджер по туризму</p>
+			</li>
+			<li class="team-list">
+				<img class="team-list__img" src="img/manager3.jpg" alt="консультант">
+				<p class="team-list__text">Олеся Михайлова - менеджер по туризму</p>
+			</li>
+		</ul>
+	</section>
+		<!-- Видео фон -->
+		<div class="video-bg">
+			<video src="video-fon.mp4" type="video/mp4" autoplay muted loop></video>
+			<div class="bg"></div>
+			<div class="video-bg__content">
+				<h1 class="video-bg__title">Совсем скоро старт бронирования туров с кэшбэком 2023</h1>
+				<h2 class="video-bg__subtitle">Успейте поймать самые выгодные предложения!</h2>
+			</div>
+		</div>
+	<!-- Преимущества -->
+	<section class="features">
+		<h2 class="section-title">Наши преимущества</h2>
+		<p class="features-text">Лучший онлайн поиск туров по России и за границей</p>
+		<ul class="grid-list">
+			<li class="list-item">
+				<i class="fa fa-chevron-down"></i>
+				<p class="item-text">Моментальное подтверждение турпакета</p>
+			</li>
+			<li class="list-item">
+				<i class="fa fa-list"></i>
+				<p class="item-text">Огромный выбор туров по направлениям</p>
+			</li>
+			<li class="list-item">
+				<i class="fa fa-user"></i>
+				<p class="item-text">Вся информация о клиенте конфиденциальна</p>
+			</li>
+			<li class="list-item">
+				<i class="fa fa-handshake"></i>
+				<p class="item-text">Быстрое оформление договора</p>
+			</li>
+			<li class="list-item">
+				<i class="fa fa-percent"></i>
+				<p class="item-text">Максимальные скидки по всем операторам</p>
+			</li>
+			<li class="list-item">
+				<i class="fa fa-plane"></i>
+				<p class="item-text">Покупка авиабилетов в любую точку мира</p>
+			</li>
+		</ul>
+	</section>
+	<!-- Отзывы-->
+	<div class="reviews">
+		<div class="item item-1">
+			<span>Отдыхали в Таиланде с 15.10.2022 г. От данной турфирмы. Отдых получился отличный, с погодой угадали, без дождей. Спасибо всем сотрудникам турфирмы Шангри-Ла!!!</span>
+		</div>
+		<div class="item item-2">
+			<span>Благодарны очень за организацию тура в Таиланд менеджеру Светлане. Информацию предоставила в полном объеме, доброжелательная, активная, оперативно были выполнены все наши пожелания!</span>
+		</div>
+		<div class="item item-3">
+			<span>Хочу выразить огромную благодарность Сергею. Спасибо огромное за наш прекрасный отпуск! Спасибо за выбор страны и отеля. Мы довольны!</span>
+		</div>
+		<div class="item item-4">
+			<span>С 16 по 27 октября отдыхали в Таиланде, Паттайе, отеле "Амбассадор Сити". Выражаю огромную благодарность менеджеру Олесе за удачно подобранный тур: удобное время вылета, превосходный отель, чудесный пляж.</span>
+		</div>
+	</div>
+	<div class="pluahs-back">
+	<div class="pluahs-slider">
+		<div><img src="img/plash1.jpg" alt="Пляж 1"></div>
+		<div><img src="img/plash2.jpg" alt="Пляж 2"></div>
+		<div><img src="img/plash3.jpeg" alt="Пляж 3"></div>
+		<div><img src="img/plash4.jpg" alt="Пляж 3"></div>
+	</div>
+	</div>
+	<!-- О компании/подбор тура -->
+	<section class="selection-tour" id="bid">
+		<h2 class="section-title">Заявка на подбор тура</h2>
+		<p class="section-text">Наша компания создана для Вашего комфорта. Мы сделали выбор и покупку тура максимально удобным для Вас. В
+			нашем поиске можно найти путешествия от 80-ти туроператоров. Оплата туров происходит через защищенные каналы связи. Если Вам понадобится помощь специалиста в подборе тура, наши менеджеры всегда, с радостью
+			подберут путешествие по Вашим запросам и будут с Вами на связи на протяжении всего отдыха. Покупая тур в нашей компании, Вы не платите никаких дополнительных комиссий и сборов, Вы бронируете тур по цене	туроператора. Чтобы сделать заявку на подбор тура, заполните все поля формы и нажмите Отправить заявку.</p>
+		<div class="container-form">
+			<form action="#" class="form">
+				<div class="form-group">
+					<label>Страна назначения</label>
+					<select>
+						<option value="1">Россия</option>
+						<option value="2">Вьетнам</option>
+						<option value="3">Индонезия</option>
+						<option value="4">Китай</option>
+						<option value="5">Турция</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Город вылета</label>
+					<select>
+						<option value="1">Екатеринбург</option>
+						<option value="2">Москва</option>
+						<option value="3">Пермь</option>
+						<option value="4">Челябинск</option>
+						<option value="5">Новосибирск</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Количество дней</label>
+					<input type="number" min="3" max="14" value="3">
+				</div>
+				<div class="form-group">
+					<label>Количество человек</label>
+					<input type="number" min="1" max="14" value="1">
+				</div>
+				<div class="form-group1 form-group1_adaprive">
+					<label>Что должно быть включено в стоимость тура</label>
+					<label class="custom-checkbox">
+						<input type="checkbox" value="value-1">
+						<span>перелет</span>
+					  </label>
+					  <label class="custom-checkbox">
+						<input type="checkbox" value="value-1">
+						<span>проживание</span>
+					  </label>
+					  <label class="custom-checkbox">
+						<input type="checkbox" value="value-1">
+						<span>питание</span>
+					  </label>
+					  <label class="custom-checkbox">
+						<input type="checkbox" value="value-1">
+						<span>трансфер</span>
+					  </label>
+				</div>
+				<div class="form-group">
+					<label>Имя*</label>
+					<input type="text" required>
+				</div>
+				<div class="form-group">
+					<label>Фамилия</label>
+					<input type="text">
+				</div>
+				<div class="form-group">
+					<label>Email*</label>
+					<input type="email" placeholder="mail@mail.ru" required>
+				</div>
+				<div class="form-group">
+					<label>Номер телефона*</label>
+					<input type="tel" required placeholder="8-992-998-89-98">
+				</div>
+				<div class="form-group1 form-group1_adaprive">
+					<label>Предпочтительный способ связи</label>
+					<label class="custom-radio">
+                        <input type="radio" name="communication" value="write">
+                        <span>напишите на указанный email</span>
+                      </label>
+                      <label class="custom-radio">
+                        <input type="radio" name="communication" value="call">
+                        <span>позвоните</span>
+                      </label>
+            	</div>
+				<div class="form-group">
+					<label>Во сколько позвонить</label>
+					<input type="time">
+				</div>
+				<div class="form-group2">
+					<label>Дополнительные комментарии</label>
+					<textarea></textarea>
+				</div>
+				
+				<div class="button-form">
+					<button class="submit" type="submit">Отправить заявку</button>
+				</div>
+			</form>
+			 </div>
+	</section>
+	<!-- Футер -->
+	<footer class="footer">
+		<ul class="footer-social">
+			<li class="social__item"><a class="social-link"href="#"><i class="fa fa-twitter-square"></i></a></li>
+			<li class="social__item"><a class="social-link"href="#"><i class="fa fa-facebook-square"></i></a></li>
+			<li class="social__item"><a class="social-link"href="#"><i class="fa fa-snapchat-square"></i></a></li>
+			<li class="social__item"><a class="social-link"href="#"><i class="fa fa-pinterest-square"></i></a></li>
+			<li class="social__item"><a class="social-link"href="#"><i class="fa fa-github-square"></i></a></li>
+		</ul>
+		<p>Сайт разработал Иванов Иван</p>
+		<!-- <div class="buttonup">
+			<a href="#" title="Вверх" class="up"> <img src="img/up.png" alt="кнопка вверх"></a>
+		</div> -->
+	</footer>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
